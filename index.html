@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <form class="mortgage-calculator" method="post" action="">
+        <section class="calc-heading">
+          <h1 class="heading">Mortgage Calculator</h1>
+          <a href="#" rel="noreferrer " class="clear-all">Clear All</a>
+        </section>
+
+        <fieldset class="">
+          <div class="mortgage">
+            <legend>Mortgage Amount</legend>
+            <label for="mortgage-amount" class="mortgage-amount">
+              <div class="color-container">
+                <input
+                  type="number"
+                  id="mortgage-amount"
+                  name="mortgage-amount"
+                  placeholder="300,000"
+                  class="mortgage-text"
+                  required
+                /><span class="span">&#163;</span>
+              </div>
+            </label>
+            <p class="error error-1">This field is required</p>
+          </div>
+          <!--end of Mortgage Amount-->
+          <div class="term-rate-container">
+            <div class="terms">
+              <legend>Mortgage Term</legend>
+              <label for="mortgage-term" class="mortgage-term">
+                <div class="color-container">
+                  <input
+                    type="number"
+                    id="mortgage-term"
+                    name="mortgage-term"
+                    placeholder="25"
+                    class="terms-text"
+                    step="0.0000000001"
+                    required
+                  /><span class="span">years</span>
+                </div>
+              </label>
+              <p class="error error-2">This field is required</p>
+            </div>
+            <!--end of Mortgage Term-->
+            <div class="rate">
+              <legend>Interest Rate</legend>
+              <label for="interest-rate" class="interest-rate">
+                <div class="color-container">
+                  <input
+                    type="number"
+                    id="interest-rate"
+                    name="interest-rate"
+                    placeholder="5.25"
+                    class="rate-text"
+                    step="0.0000000001"
+                    required
+                  /><span class="span">&#37;</span>
+                </div>
+              </label>
+              <p class="error error-3">This field is required</p>
+            </div>
+          </div>
+          <!--end of Interest Rate-->
+        </fieldset>
+        <fieldset class="mortgage-type-container">
+          <legend>Mortgage Type</legend>
+
+          <div class="radio-1">
+            <label for="repayment-type" class="repayment-type">
+              <input
+                type="radio"
+                id="repayment-type"
+                name="mortgage-type"
+                class="inline"
+                required
+              />Repayment</label
+            >
+          </div>
+          <!--end of Repayment Rate-->
+          <div class="radio-2">
+            <label for="interest-type">
+              <input
+                type="radio"
+                id="interest-type"
+                name="mortgage-type"
+                class="inline"
+                required
+              />Interest Only</label
+            >
+          </div>
+          <p class="error error-4">This field is required</p>
+          <!--end of Interest Type-->
+        </fieldset>
+        <button class="btn" type="submit">
+          <img src="./assets/images/icon-calculator.svg" alt="Calculator" />
+          <p class="calc-text">Calculate Repayments</p>
+        </button>
+      </form>
+      <!-- Form End -->
+
+      <!-- Empty results start -->
+      <aside class="show-result active">
+        <img
+          src="./assets/images/illustration-empty.svg"
+          alt="Illustration Empty"
+          class="calc-img"
+        />
+        <h2 class="result-here">Results shown here</h2>
+        <p class="result-paragraph">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </aside>
+      <!-- Empty results end -->
+
+      <!-- Completed results start -->
+      <div class="results">
+        <h2 class="result-heading">Your results</h2>
+        <p class="result-description">
+          Your results are shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+
+        <div class="result-container">
+          <div class="result-value">
+            <p class="result-value-paragraph">Your monthly repayments</p>
+            <h3 class="result-monthly">&#163;1,797.74</h3>
+
+            <hr />
+            <p class="result-value-paragraph">
+              Total you'll repay over the term
+            </p>
+            <h3 class="result-total">&#163;1,797.74</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Ahmed M. Nafrawy</a>.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
